@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -32,19 +33,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 //        if(savedInstanceState==null){
 //            getSupportFragmentManager().beginTransaction()
-//                    .add(R.id.container, new PlaceHolderFragment())
+//                    .add(R.id., new PlaceHolderFragment())
 //                    .commit();
         }
 
 
 
-    public static class PlaceHolderFragment extends Fragment {
+    public static class ForecastFragment extends Fragment {
 
         private ArrayAdapter<String> mForecastAdapter;
 
-        public PlaceHolderFragment(){
+        public ForecastFragment(){
 
         }
 
@@ -135,6 +139,12 @@ public class MainActivity extends AppCompatActivity {
 
             return rootView;
         }
+//
+//        public class FetchWeatherTask extends AsyncTask<Void, Void, Void>{
+//
+//            private final String LOG_TAG =
+//
+//        }
     }
 
 
